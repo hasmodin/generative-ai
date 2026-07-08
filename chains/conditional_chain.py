@@ -49,4 +49,4 @@ branch_chain = RunnableBranch(
 
 final_chain = classifier_chain | branch_chain
 
-result = final_chain.invoke({"feedback": "This is a terriable phone"})
+result = final_chain.invoke({"feedback": "This is a terrible phone"})

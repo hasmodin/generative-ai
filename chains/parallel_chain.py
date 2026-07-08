@@ -6,7 +6,7 @@ from langchain_prompts import PromptTemplate
 from langchain_schema.runnable import RunnableParallel
 load_dotenv()
 
-model1 = ChatOpenAI
+model1 = ChatOpenAI()
 model2 = ChatAnthropic(model_name="claud-3")
 
 prompt1 = PromptTemplate(
@@ -34,7 +34,7 @@ parallel_chain = RunnableParallel({
 
 merge_chain = prompt3 | model1 | parser
 
-chain parallel_chain | merge_chain
+chain = parallel_chain | merge_chain
 
 text = "Sheikh Tamim was commissioned as a second lieutenant in the Qatar Armed Forces upon graduation from Sandhurst.[1] He became the heir apparent to the Qatari throne on 5 August 2003, when his elder brother Sheikh Jassim renounced his claim to the title.[3][1] Since then he was groomed to take over rule, working in top security and economics posts.[2] On 5 August 2003, he was appointed deputy commander-in-chief of Qatar's armed forces.[1]
 
